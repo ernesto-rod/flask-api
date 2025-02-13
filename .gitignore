@@ -1,0 +1,10 @@
+.dockerignore
+.venv
+.ruff_cache
+.ropeproject
+__pychage__
+docker-compose*
+instance/*
+pyproject.toml
+*.pyc
+.DS_Store
