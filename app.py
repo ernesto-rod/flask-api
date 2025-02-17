@@ -1,5 +1,6 @@
 import os
 
+from dotenv import load_dotenv
 from flask import Flask, jsonify
 from flask_jwt_extended import JWTManager
 from flask_migrate import Migrate
@@ -15,6 +16,7 @@ from resources.user import blp as UserBlueprint
 
 def create_app(db_url: str | None = None):
     app = Flask(__name__)
+    load_dotenv()
 
     app.config["PROPAGATE_EXECPTIONS"] = True
     app.config["API_TITLE"] = "Stores REST  API"
